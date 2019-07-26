@@ -1,0 +1,49 @@
+movies = [{
+	"Title":"Inception",
+	"Likes": "30",
+	"Realease": "2010",
+	"Income": "825,532,764",
+	"Foto": "img/Inception.jpg",
+	"ID": "0"
+},{
+
+	"Title":"Limitless",
+	"Likes": "27",
+	"Realease": "2011",
+	"Income": "161,800,000",
+	"Foto": "img/Limitless.jpg",
+	"ID": "1"
+},{
+
+	"Title":"The Godfather",
+	"Likes": "25",
+	"Realease": "1972",
+	"Income": "268,500,000",
+	"Foto": "img/Godfather.jpg",
+	"ID": "2"
+},
+{
+	"Title":"John Wick",
+	"Likes": "20",
+	"Realease": "2014",
+	"Income": "130,888,901",
+	"Foto": "img/John.jpg",
+	"ID": "3"
+},
+{
+	"Title":"The Martian",
+	"Likes": "12",
+	"Realease": "2015",
+	"Income": "630,200,000",
+	"Foto": "img/Martian.jpg",
+	"ID": "4"
+},
+{
+	"Title":"Now you see me",
+	"Likes": "10",
+	"Realease": "2013",
+	"Income": "351,700,000",
+	"Foto": "img/Now.jpg",
+	"ID": "5"
+
+}]

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CodeReview04</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+<header>
+	<div id="phead">Movie Factory</div>
+	<nav>
+		<ul>
+			<li><a href="">Home</a></li>
+		</ul>
+	</nav>
+</header>
+
+
+<main>
+	<div id="top">
+		<p>Movies</p>
+		<select id="sorting">
+			<option>Sort</option>
+			<option value="Likesa">Sort by LIKES ascending</option>
+			<option value="Likesd">Sort by LIKE descending</option>
+			<option value="Date">Sort by Realease Date</option>
+			<option value="Income">Sort by Income</option>
+		</select>
+	</div>
+
+
+<div id="dmovies">
+	
+</div>
+</main>
+
+
+
+<script src="json/data.json"></script>
+<script>
+
+
+function display(){
+var data = document.getElementById("dmovies");
+	
+for (var i =0;  i< movies.length; i++) {
+
+	data.innerHTML+= `<div class="container">
+	<div class="image"><img src ="${movies[i].Foto}"></div>
+
+	<div class = "hole">
+	<p class = "Title"><b><i>${movies[i].Title}</b></i></p>
+	<p class = "Realease"> The movis was realeased in <b><i>${movies[i].Realease}</i></b></p>
+	<p class = "income"> the movie made <b><i> ${movies[i].Income}</b></i> $ worldwide</p>
+	<p class="like"> If you enjoyed the movie please hit the like button below!<br></p>
+	<button class ="btm" id = "${i}">Like</button> 
+	<p class ="show">${movies[i].Likes}</p> 
+	</div>
+	 </div>`;
+
+}
+ for (var i =0;  i< movies.length; i++) {
+	allbtn[i].addEventListener("click", function(){increase(this.getAttribute("id"))},false);
+}
+}
+
+
+function onselect(){
+	var get = document.getElementById("sorting").value;
+	var data = document.getElementById("dmovies");
+
+	switch(get){
+
+		case "Likesa":
+		data.innerHTML= "";
+		movies.sort((a,b) => (a.Likes > b.Likes) ? 1 : -1);
+		display();
+		break;
+
+		case "Likesd":
+		data.innerHTML= "";
+		movies.sort((a,b) => (a.Likes > b.Likes) ? 1 : -1);
+		movies.reverse();
+		display();
+		console.log(movies[i] + "\n");
+		break;
+
+		case "Date":
+		data.innerHTML= "";
+		movies.sort((a,b) => (a.Realease > b.Realease) ? 1 : -1);
+		display();
+		break;
+
+		case "Income":
+		data.innerHTML= "";
+		movies.sort((a,b) => (a.Income > b.Income) ? 1 : -1);
+		display();
+		break;
+
+		default:
+		data.innerHTML= "";
+		movies.reverse();
+		display();
+
+	}
+}
+
+var allbtn = document.getElementsByClassName("btm");
+
+
+
+
+
+onselect();
+var btn = document.getElementById("sorting");
+btn.addEventListener("change",onselect,false);
+
+
+
+function increase (i){
+		var change = document.getElementsByClassName("show");
+		movies[i].Likes.innerHTML=movies[i].Likes++;
+			change[i].innerHTML = movies[i].Likes;
+		console.log(movies[i].Likes + "\n");
+
+}
+
+</script>
+
+
+</body>
+</html>
