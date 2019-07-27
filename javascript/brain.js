@@ -42,7 +42,6 @@ function onselect(){
 		movies.sort((a,b) => (a.Likes > b.Likes) ? 1 : -1);
 		movies.reverse();
 		display();
-		console.log(movies[i] + "\n");
 		break;
 
 		case "Date":
@@ -81,6 +80,5 @@ function increase (i){
 		var change = document.getElementsByClassName("show");
 		movies[i].Likes.innerHTML=movies[i].Likes++;
 			change[i].innerHTML = movies[i].Likes;
-		console.log(movies[i].Likes + "\n");
 
 }
