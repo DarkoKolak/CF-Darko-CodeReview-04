@@ -1,3 +1,5 @@
+
+
 header
 	background-color: #000000
 	#phead
@@ -50,20 +52,22 @@ main
 		justify-content: space-around
 		display: flex
 		.container
-			width: 42%
-			height: 30vw
+			max-width: 520px
+			height: 400px
 			flex-direction: row
 			justify-content: space-between
 			display: flex
 			margin-bottom: 8vw
 			background-color: black
 			border-radius: 12px
+			overflow: hidden
 			.image
-				width: 100%
-				max-height: 100%
-				max-width: 100%
+				height: auto
+				min-width: 300px
+				max-width: 350px
 				overflow: hidden
 				border-radius: 12px
+				margin-right: 0
 
 		.hole
 			flex-direction: column
@@ -71,13 +75,53 @@ main
 			display: flex
 			color: white
 			text-align: center
+			margin-left: 0
+			margin-right: 5%
 			.Title
-				font-size: 2vw
+				font-size: 160%
 				margin-bottom: 0
 			.Realease 
 				margin-bottom: 0
+				font-size: 120%
 			.income
-				margin-bottom: 3vw
+				margin-bottom: 5%
+				font-size: 120%
+
+			.btm 
+				background-color: black
+				color: green
+				border: none
+				font-size: 120%
+				margin-bottom: 0
+				width: 50%
+			.show
+				font-size: 90% 
+				background-color: green
+				border-radius: 30px
+				color: white
+				margin: 0
+				width: 30%
+				padding-top: 2%
+			.like
+				margin-bottom: 0
+				font-size: 90%
+
+			.row
+				display: flex
+				flex-direction: row
+				flex-wrap: nowrap
+				justify-content: space-around
+				margin-left: -25%
+
+
+footer 
+	height: 8vw
+	background-color: black
+	font-size: 3vw
+	text-align: center
+	padding-top: 3vw
+
+
 
 
 
